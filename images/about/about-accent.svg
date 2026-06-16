@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="280" viewBox="0 0 350 280">
+  <rect width="350" height="280" fill="#0d3020"/>
+  <rect x="0" y="0" width="350" height="4" fill="#E9A826"/>
+  <rect x="0" y="276" width="350" height="4" fill="#E9A826"/>
+  <text x="175" y="130" font-family="Arial,sans-serif" font-size="17"
+        fill="#FFFFFF" text-anchor="middle" opacity="0.5">📷</text>
+  <text x="175" y="158" font-family="Arial,sans-serif" font-size="12"
+        fill="#FFFFFF" text-anchor="middle" opacity="0.7">About Accent</text>
+</svg>
