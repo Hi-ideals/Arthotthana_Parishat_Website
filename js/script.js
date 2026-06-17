@@ -60,15 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         const el   = entry.target;
         const end  = parseInt(el.getAttribute('data-count'));
-        const dur  = 1800;
-        const step = Math.ceil(end / (dur / 16));
-        let   curr = 0;
+        const duration = 1800; // 1.8 seconds
+        const startTime = performance.now();
         const suffix = el.getAttribute('data-suffix') || '';
-        const timer = setInterval(() => {
-          curr = Math.min(curr + step, end);
+        
+        function updateCounter(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // easeOutQuad curve for smooth decelerating animation
+          const easeProgress = progress * (2 - progress);
+          const curr = Math.floor(easeProgress * end);
+          
           el.textContent = curr.toLocaleString() + suffix;
-          if (curr >= end) clearInterval(timer);
-        }, 16);
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = end.toLocaleString() + suffix;
+          }
+        }
+        
+        requestAnimationFrame(updateCounter);
         counterObserver.unobserve(el);
       }
     });
@@ -265,10 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.createElement('div');
     toast.style.cssText = `
       position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(20px);
-      background:#1B4332; color:#fff; padding:14px 28px; border-radius:8px;
+      background:#4a4047; color:#fff; padding:14px 28px; border-radius:8px;
       font-size:.9rem; font-weight:600; z-index:9999; opacity:0;
       transition: all .4s ease; box-shadow:0 8px 32px rgba(0,0,0,.2);
-      border-left:4px solid #E9A826;
+      border-left:4px solid #e5dcd3;
     `;
     toast.textContent = msg;
     document.body.appendChild(toast);
@@ -302,6 +315,122 @@ document.addEventListener('DOMContentLoaded', () => {
     customAmountInput.addEventListener('input', () => {
       document.querySelectorAll('.donate-card').forEach(c => c.classList.remove('active'));
     });
+  }
+
+  /* ── Wavy Timeline Animation ───────────────────────────── */
+  const timeline = document.querySelector('.timeline');
+  if (timeline) {
+    const svg = timeline.querySelector('.timeline-svg-line');
+    const pathBg = timeline.querySelector('.timeline-path-bg');
+    const pathFill = timeline.querySelector('.timeline-path-fill');
+    const items = timeline.querySelectorAll('.timeline-item');
+    const dots = timeline.querySelectorAll('.timeline-dot');
+
+    let cachedPoints = [];
+    let cachedPathLength = 0;
+
+    function updateTimelinePath() {
+      if (!timeline || !svg || !pathBg || !pathFill || dots.length === 0) return;
+
+      const timelineRect = timeline.getBoundingClientRect();
+      const timelineHeight = timeline.offsetHeight;
+      
+      svg.setAttribute('viewBox', `0 0 ${timelineRect.width} ${timelineHeight}`);
+      
+      cachedPoints = [];
+      dots.forEach(dot => {
+        let top = 0;
+        let left = 0;
+        let currentEl = dot;
+        while (currentEl && currentEl !== timeline) {
+          top += currentEl.offsetTop;
+          left += currentEl.offsetLeft;
+          currentEl = currentEl.offsetParent;
+        }
+        const x = left + dot.offsetWidth / 2;
+        const y = top + dot.offsetHeight / 2;
+        cachedPoints.push({ x, y, el: dot });
+      });
+
+      cachedPoints.sort((a, b) => a.y - b.y);
+
+      if (cachedPoints.length === 0) return;
+
+      const isMobile = window.innerWidth < 992;
+      const waveWidth = isMobile ? 18 : 65;
+
+      let pathD = `M ${cachedPoints[0].x} ${cachedPoints[0].y}`;
+
+      for (let i = 0; i < cachedPoints.length - 1; i++) {
+        const pStart = cachedPoints[i];
+        const pEnd = cachedPoints[i + 1];
+        const dy = pEnd.y - pStart.y;
+        const dir = (i % 2 === 0) ? 1 : -1;
+        const cp1x = pStart.x + dir * waveWidth;
+        const cp1y = pStart.y + dy * 0.35;
+        const cp2x = pEnd.x + dir * waveWidth;
+        const cp2y = pEnd.y - dy * 0.35;
+        pathD += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${pEnd.x} ${pEnd.y}`;
+      }
+
+      pathBg.setAttribute('d', pathD);
+      pathFill.setAttribute('d', pathD);
+
+      cachedPathLength = pathFill.getTotalLength();
+      pathFill.style.strokeDasharray = cachedPathLength;
+      
+      onTimelineScroll();
+    }
+
+    function onTimelineScroll() {
+      if (!timeline || !pathFill || cachedPoints.length === 0) return;
+
+      const timelineRect = timeline.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      const triggerY = viewportHeight * 0.7;
+      const scrollYInTimeline = (viewportHeight - timelineRect.top) - (viewportHeight - triggerY);
+      
+      const startY = cachedPoints[0].y;
+      const endY = cachedPoints[cachedPoints.length - 1].y;
+      const drawHeight = endY - startY;
+
+      const scrollFromStart = scrollYInTimeline - startY;
+      let progress = scrollFromStart / drawHeight;
+      progress = Math.max(0, Math.min(1, progress));
+
+      pathFill.style.strokeDashoffset = cachedPathLength * (1 - progress);
+
+      const currentScrollY = scrollYInTimeline;
+
+      cachedPoints.forEach((pt, index) => {
+        const item = items[index];
+        if (currentScrollY >= pt.y - 10) {
+          if (pt.el) pt.el.classList.add('active');
+          if (item) item.classList.add('visible');
+        } else {
+          if (pt.el) pt.el.classList.remove('active');
+          if (item) item.classList.remove('visible');
+        }
+      });
+    }
+
+    setTimeout(updateTimelinePath, 200);
+    window.addEventListener('load', updateTimelinePath);
+    window.addEventListener('scroll', onTimelineScroll);
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateTimelinePath, 100);
+    });
+
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(() => {
+        updateTimelinePath();
+      });
+      ro.observe(timeline);
+    }
   }
 
 });

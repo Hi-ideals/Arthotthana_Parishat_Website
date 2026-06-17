@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arthotthana Parishat - Empowering Youth</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary": "#ffffff",
+            "surface-bright": "#f7f9fb",
+            "on-tertiary-container": "#8a8a93",
+            "secondary-container": "#fed488",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#191c1e",
+            "primary-fixed-dim": "#adc7f8",
+            "surface-dim": "#d8dadc",
+            "secondary-fixed-dim": "#e9c176",
+            "primary-container": "#00234b",
+            "error": "#ba1a1a",
+            "surface": "#f7f9fb",
+            "on-surface-variant": "#43474e",
+            "on-primary-container": "#718bb9",
+            "surface-variant": "#e0e3e5",
+            "secondary": "#775a19",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#46464e",
+            "tertiary-fixed": "#e3e1ec",
+            "outline-variant": "#c4c6d0",
+            "background": "#f7f9fb",
+            "surface-tint": "#455f8a",
+            "surface-container": "#eceef0",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#5d4201",
+            "tertiary-fixed-dim": "#c6c5cf",
+            "on-primary-fixed": "#001b3d",
+            "surface-container-highest": "#e0e3e5",
+            "secondary-fixed": "#ffdea5",
+            "outline": "#74777f",
+            "inverse-surface": "#2d3133",
+            "tertiary-container": "#22232a",
+            "inverse-on-surface": "#eff1f3",
+            "on-secondary-fixed": "#261900",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#1a1b22",
+            "on-background": "#191c1e",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-container": "#785a1a",
+            "surface-container-low": "#f2f4f6",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#2c4771",
+            "inverse-primary": "#adc7f8",
+            "tertiary": "#0c0d14",
+            "primary-fixed": "#d6e3ff",
+            "primary": "#000e24",
+            // Editorial Palette
+            brand: {
+              dark: '#2c222c',    /* Deep plum/charcoal */
+              sage: '#4a3f4a',    /* Muted plum */
+              sageLight: '#6b5e6b', /* Hover states */
+              yellow: '#e5d3b3',  /* Champagne */
+              offwhite: '#faf7f2', /* Warm editorial off-white */
+              textLight: '#8a828a', /* Light text for body against dark */
+            }
+          },
+          fontFamily: {
+            "label-caps": ["Work Sans", "sans-serif"],
+            "display-lg": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "display-lg-mobile": ["Newsreader", "serif"],
+            "body-md": ["Work Sans", "sans-serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "body-lg": ["Work Sans", "sans-serif"],
+            serif: ['Newsreader', 'serif'],
+            sans: ['Work Sans', 'sans-serif'],
+          },
+          spacing: {
+            "margin-tablet": "32px",
+            "margin-mobile": "16px",
+            "margin-desktop": "64px",
+            "gutter": "24px",
+            "container-max": "1280px",
+            "base": "8px"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    body {
+      background-color: #faf7f2; /* brand.offwhite */
+      color: #2c222c; /* brand.dark */
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Background Text Placeholder -->
+<div class="fixed top-1/2 -left-32 transform -translate-y-1/2 -rotate-90 pointer-events-none z-0 opacity-[0.03]">
+<span class="font-serif text-[150px] font-bold tracking-tighter text-brand-dark whitespace-nowrap">Arthotthana Parishat</span>
+</div>
+<!-- BEGIN: MainHeader -->
+<header class="relative z-50 w-full px-6 lg:px-12 py-6 flex items-center justify-between border-b border-brand-dark/10 bg-brand-offwhite/90 backdrop-blur-md sticky top-0 shadow-lg">
+<!-- Logo Section -->
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 bg-brand-dark rounded-xl flex items-center justify-center text-brand-offwhite font-serif text-xl font-bold shadow-md">
+        A
+      </div>
+<div class="flex flex-col">
+<span class="font-serif text-lg font-semibold tracking-wide text-brand-dark">Arthotthana Parishat</span>
+<span class="font-sans text-[10px] text-brand-sage tracking-[0.2em] uppercase mt-0.5">Bidar, Karnataka</span>
+</div>
+</div>
+<!-- Navigation Menu -->
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-brand-dark font-medium text-sm tracking-wide hover:opacity-80 transition-opacity relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-brand-dark" href="#">Home</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">About</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">Programs</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">Gallery</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">Events</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">Volunteer</a>
+<a class="text-brand-sage hover:text-brand-dark text-sm tracking-wide transition-colors" href="#">Contact</a>
+</nav>
+<!-- CTA Button -->
+<div class="hidden md:block">
+<a class="bg-brand-dark hover:bg-brand-sage text-brand-yellow font-bold py-3 px-8 rounded-xl text-sm tracking-widest uppercase transition-all shadow-lg hover:shadow-xl" href="#">
+        Donate Now
+      </a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden text-brand-dark">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</button>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<main class="relative z-10 flex-grow w-full pb-24 lg:pt-16 px-4 lg:px-12">
+<!-- Fluid Overlapping Card Layout Container -->
+<div class="max-w-[1400px] mx-auto relative w-full min-h-[85vh] flex flex-col lg:block">
+<!-- Right Immersive Image Section (Background Card) -->
+<div class="w-full lg:absolute lg:top-8 lg:right-0 lg:w-[65%] h-[50vh] lg:h-[75vh] z-10 rounded-2xl overflow-hidden shadow-2xl border border-brand-dark/10 bg-brand-dark flex items-center justify-center relative">
+<div class="absolute inset-0 bg-brand-sage flex flex-col items-center justify-center">
+<!-- Placeholder content matching the reference -->
+<svg class="w-12 h-12 text-brand-yellow mb-4 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>
+<span class="text-sm font-sans text-brand-yellow/70 tracking-widest uppercase">Community Photo</span>
+</div>
+<!-- Floating Info Card (Overlapping bottom right) -->
+<div class="absolute bottom-4 left-4 right-4 lg:bottom-12 lg:right-12 lg:left-auto lg:w-96 z-30 bg-brand-offwhite p-6 rounded-xl border border-brand-dark/10 shadow-2xl flex items-start space-x-6 backdrop-blur-md">
+<!-- Icon Box -->
+<div class="w-10 h-10 flex-shrink-0 border border-brand-dark rounded-full flex items-center justify-center text-brand-dark mt-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"></path></svg>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col">
+<h3 class="font-serif font-medium text-brand-dark text-lg leading-tight mb-2">State of Karnataka Registered</h3>
+<p class="font-sans text-xs text-brand-sage tracking-wide uppercase leading-relaxed">BVB College Road, Vidyanagar<br/>Bidar - 585401</p>
+</div>
+</div>
+</div>
+<!-- Left Typography Section (Foreground Overlapping Card) -->
+<div class="w-full relative z-20 mt-[-5vh] lg:mt-0 lg:absolute lg:top-24 lg:left-0 lg:w-[45%] bg-brand-offwhite rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-brand-dark/10 p-8 lg:p-14 xl:p-16">
+<!-- Location Badge -->
+<div class="inline-flex items-center space-x-3 mb-10">
+<span class="w-12 h-px bg-brand-dark/30 block"></span>
+<span class="text-brand-sage text-[11px] font-semibold tracking-[0.2em] uppercase">Est. In Bidar, Karnataka</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-serif text-5xl lg:text-6xl xl:text-7xl leading-[1.1] text-brand-dark mb-8 tracking-tight">
+<span class="block italic pr-8 text-brand-sage">Empowering</span>
+<span class="block pl-8 lg:pl-12">Youth, Building</span>
+<span class="block text-brand-dark">Entrepreneurs</span>
+<span class="block pl-4 lg:pl-8 italic text-brand-sage">Transforming</span>
+<span class="block">Lives.</span>
+</h1>
+<!-- Subheadline -->
+<div class="pl-0 lg:pl-8">
+<p class="font-sans text-brand-sage text-base lg:text-lg leading-[1.8] mb-10 max-w-lg font-light">
+            Arthotthana Parishat works relentlessly for the economic development and welfare of unemployed youth — turning aspirations into enterprises, and communities into opportunities.
+          </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-6">
+<a class="group flex items-center space-x-3 text-brand-dark font-medium tracking-wide" href="#">
+<span class="w-12 h-12 rounded-full border border-brand-dark flex items-center justify-center group-hover:bg-brand-dark group-hover:text-brand-offwhite transition-colors shadow-lg">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</span>
+<span>Our Programs</span>
+</a>
+<a class="group flex items-center space-x-3 text-brand-sage font-medium tracking-wide hover:text-brand-dark transition-colors" href="#">
+<span class="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-brand-dark shadow-lg">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+</span>
+<span>Support Us</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- END: HeroSection -->
+</body></html>
