@@ -11,7 +11,8 @@ based in Bidar, Karnataka, focused on economic development and social welfare.
 /
 ├── index.html          — Home page
 ├── about.html          — About Us
-├── programs.html       — Programs & Projects
+├── initiatives.html    — Initiatives (Namma Bidar, Localight, Parv)
+├── projects.html       — Projects (Startup development, Digital Skills, etc.)
 ├── gallery.html        — Photo Gallery
 ├── events.html         — Events (upcoming & past)
 ├── volunteers.html     — Volunteer registration

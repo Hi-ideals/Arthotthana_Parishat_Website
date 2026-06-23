@@ -41,7 +41,7 @@
       <div class="brand-icon">A</div>
       <div>
         <div class="brand-text-main">Arthotthana Parishat</div>
-        <div class="brand-text-sub">Bidar, Karnataka</div>
+        
       </div>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
@@ -51,12 +51,18 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="initiatives.html">Initiatives</a></li>
+            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="volunteers.html">Volunteer</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ms-lg-2"><a class="nav-link nav-donate-btn" href="donate.html">Donate Now</a></li>
+        <!-- <li class="nav-item ms-lg-2"><a class="nav-link nav-donate-btn" href="donate.html">Donate Now</a></li> -->
       </ul>
     </div>
   </div>
@@ -71,7 +77,22 @@
       
       <!-- Right Immersive Image Section (Background Card) -->
       <div class="hero-bg-card">
-        <img src="images/hero/hero-community.svg" alt="Community members empowered by Arthotthana Parishat" loading="lazy" />
+        <div id="heroCarousel" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="carousel" data-bs-interval="4000">
+          <div class="carousel-inner h-100 w-100">
+            <div class="carousel-item active h-100 w-100">
+              <img src="images/hero/Hero1.png" alt="Community members empowered by Arthotthana Parishat" loading="lazy" />
+            </div>
+            <div class="carousel-item h-100 w-100">
+              <img src="images/hero/Hero2.png" alt="Arthotthana Parishat Community Work" loading="lazy" />
+            </div>
+            <div class="carousel-item h-100 w-100">
+              <img src="images/hero/Hero3.png" alt="Arthotthana Parishat Social Work" loading="lazy" />
+            </div>
+            <div class="carousel-item h-100 w-100">
+              <img src="images/hero/Hero4.png" alt="Arthotthana Parishat Social Work" loading="lazy" />
+            </div>
+          </div>
+        </div>
         
         <!-- Floating Info Card (Overlapping bottom right) -->
         <div class="hero-floating-info">
@@ -109,18 +130,20 @@
         
         <!-- Action Buttons -->
         <div class="hero-actions-editorial">
-          <a href="programs.html" class="btn-action-circle">
+          <a href="projects.html" class="btn-action-circle">
             <span class="circle-icon">
               <i class="bi bi-arrow-right"></i>
             </span>
-            <span>Our Programs</span>
+            <span>Our Projects</span>
           </a>
+          <!--
           <a href="donate.html" class="btn-action-circle accent">
             <span class="circle-icon">
               <i class="bi bi-heart-fill"></i>
             </span>
             <span>Support Us</span>
           </a>
+          -->
         </div>
       </div>
       
@@ -134,25 +157,25 @@
     <div class="row g-4">
       <div class="col-6 col-md-3">
         <div class="glass-card text-center">
-          <div class="impact-num" data-count="5000" data-suffix="+">0+</div>
+          <div class="impact-num" data-count="3" data-suffix="+">0+</div>
+          <div class="impact-label">Years of Expertise</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="glass-card text-center">
+          <div class="impact-num" data-count="100" data-suffix="+">0+</div>
           <div class="impact-label">Youth Empowered</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="glass-card text-center">
-          <div class="impact-num" data-count="120" data-suffix="+">0+</div>
-          <div class="impact-label">Workshops & Melas</div>
+          <div class="impact-num" data-count="25" data-suffix="+">0+</div>
+          <div class="impact-label">Projects</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="glass-card text-center">
-          <div class="impact-num" data-count="800" data-suffix="+">0+</div>
-          <div class="impact-label">Entrepreneurs</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="glass-card text-center">
-          <div class="impact-num" data-count="50" data-suffix="+">0+</div>
+          <div class="impact-num" data-count="10" data-suffix="+">0+</div>
           <div class="impact-label">Partner Organizations</div>
         </div>
       </div>
@@ -166,10 +189,10 @@
     <div class="row align-items-center gy-5">
       <div class="col-lg-5">
         <div class="about-img-stack">
-          <img src="images/about/about-main.svg" alt="Arthotthana Parishat community work" class="about-img-main fade-up" loading="lazy" />
-          <img src="images/about/about-accent.svg" alt="Youth training workshop" class="about-img-accent" loading="lazy" />
+          <img src="images/about/About%20Main.png" alt="Arthotthana Parishat community work" class="about-img-main fade-up" loading="lazy" />
+          <img src="images/about/About%20Accent.jpg" alt="Youth training workshop" class="about-img-accent" loading="lazy" />
           <div class="about-badge">
-            <div class="about-badge-num">10+</div>
+            <div class="about-badge-num">3+</div>
             <div class="about-badge-txt">Years of Service</div>
           </div>
         </div>
@@ -222,7 +245,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/entrepreneurship.svg" alt="Entrepreneurship Program" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Entrepreneurship.png" alt="Entrepreneurship Program" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--green-light),var(--green-mid));">
@@ -238,7 +261,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/digital-skills.svg" alt="Digital Skills Program" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Digital Marketing & E-Commerce.png" alt="Digital Skills Program" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--amber),var(--green-mid));">
@@ -254,7 +277,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/women-empowerment.svg" alt="Women Empowerment Program" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Women Emp.png" alt="Women Empowerment Program" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--amber),var(--green-light));">
@@ -270,7 +293,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/education.svg" alt="Education Program" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Human Resorces.png" alt="Education Program" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--green-light),var(--green-mid));">
@@ -286,7 +309,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/health.svg" alt="Health Program" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Rural Health.png" alt="Health Program" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--amber),var(--green-light));">
@@ -302,7 +325,7 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="ap-card h-100">
           <div class="ap-card-img-wrap">
-            <img src="images/programs/skilled-services.svg" alt="Skilled Services Platform" class="ap-card-img" loading="lazy" />
+            <img src="images/programs/Services.png" alt="Skilled Services Platform" class="ap-card-img" loading="lazy" />
           </div>
           <div class="ap-card-body">
             <div class="program-icon-wrap" style="width:48px;height:48px;border-radius:var(--radius);font-size:1.1rem;margin-bottom:14px;background:linear-gradient(135deg,var(--amber),var(--green-mid));">
@@ -317,7 +340,7 @@
       </div>
     </div>
     <div class="text-center mt-5 fade-up">
-      <a href="programs.html" class="btn-outline-green"><i class="bi bi-grid"></i>View All Programs</a>
+      <a href="projects.html" class="btn-outline-green"><i class="bi bi-grid"></i>View All Projects</a>
     </div>
   </div>
 </section>
@@ -337,7 +360,7 @@
           
           <p class="testimonial-text">The entrepreneurship workshop by Arthotthana Parishat changed my life. I started my own tailoring business and now employ 6 women from my village. I am grateful forever.</p>
           <div class="testimonial-author">
-            <img src="images/team/testimonial-1.svg" alt="Sunita Patil" class="testimonial-avatar" loading="lazy" />
+            <img src="images/team/woman-logo.jpg" alt="Sunita Patil" class="testimonial-avatar" loading="lazy" />
             <div>
               <div class="testimonial-name">Sunita Patil</div>
               <div class="testimonial-role">Women Entrepreneur, Bidar</div>
@@ -351,7 +374,7 @@
           
           <p class="testimonial-text">I was struggling to sell my farm produce. After the e-commerce training, I sell directly to customers online. My income has doubled within one season of using the digital platform.</p>
           <div class="testimonial-author">
-            <img src="images/team/testimonial-2.svg" alt="Ramesh Kumar" class="testimonial-avatar" loading="lazy" />
+            <img src="images/team/mann.png" alt="Ramesh Kumar" class="testimonial-avatar" loading="lazy" />
             <div>
               <div class="testimonial-name">Ramesh Kumar</div>
               <div class="testimonial-role">Farmer & Digital Entrepreneur, Gulbarga</div>
@@ -362,10 +385,10 @@
       <div class="col-md-6 col-lg-4 fade-up">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          i
+      
           <p class="testimonial-text">The mobile health camp in our village saved my daughter's life. We had no access to doctors before. Arthotthana Parishat brought hope to a community that was invisible to the system.</p>
           <div class="testimonial-author">
-            <img src="images/team/testimonial-3.svg" alt="Anand Nayak" class="testimonial-avatar" loading="lazy" />
+            <img src="images/team/mann.png" alt="Anand Nayak" class="testimonial-avatar" loading="lazy" />
             <div>
               <div class="testimonial-name">Anand Nayak</div>
               <div class="testimonial-role">Farmer, Yadgir District</div>
@@ -475,6 +498,7 @@
 </section>
 
 <!-- ── DONATE PREVIEW ──────────────────────────────────────── -->
+<!--
 <section class="section-pad bg-cream">
   <div class="container">
     <div class="section-header text-center fade-up">
@@ -518,8 +542,10 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- ── PARTNERS ────────────────────────────────────────────── -->
+<!--
 <section class="section-pad-sm">
   <div class="container">
     <div class="text-center mb-4 fade-up">
@@ -535,6 +561,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- ── NEWSLETTER ──────────────────────────────────────────── -->
 <section class="newsletter-section section-pad-sm">
@@ -583,20 +610,20 @@
         <ul class="footer-links">
           <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
           <li><a href="about.html"><i class="bi bi-chevron-right"></i>About Us</a></li>
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Programs</a></li>
-          <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+          <li><a href="initiatives.html"><i class="bi bi-chevron-right"></i>Initiatives</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
           <li><a href="events.html"><i class="bi bi-chevron-right"></i>Events</a></li>
           <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
-        <div class="footer-heading">Programs</div>
+        <div class="footer-heading">Projects</div>
         <ul class="footer-links">
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Entrepreneurship</a></li>
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Digital Skills</a></li>
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Women Empowerment</a></li>
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Education</a></li>
-          <li><a href="programs.html"><i class="bi bi-chevron-right"></i>Rural Health</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Entrepreneurship</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Digital Skills</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Women Empowerment</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Education</a></li>
+          <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Rural Health</a></li>
           <li><a href="volunteers.html"><i class="bi bi-chevron-right"></i>Volunteer</a></li>
         </ul>
       </div>
@@ -608,11 +635,11 @@
         </div>
         <div class="footer-contact-item">
           <div class="footer-contact-icon"><i class="bi bi-telephone-fill"></i></div>
-          <div class="footer-contact-text">+91 XXXXX XXXXX</div>
+          <div class="footer-contact-text"><a href="tel:+918762164645" style="color: inherit; text-decoration: none;">+91 87621 64645</a></div>
         </div>
         <div class="footer-contact-item">
           <div class="footer-contact-icon"><i class="bi bi-envelope-fill"></i></div>
-          <div class="footer-contact-text">info@arthotthanaparishat.org</div>
+          <div class="footer-contact-text"><a href="mailto:arthotthana@gmail.com" style="color: inherit; text-decoration: none;">arthotthana@gmail.com</a></div>
         </div>
         <div class="footer-contact-item">
           <div class="footer-contact-icon"><i class="bi bi-clock-fill"></i></div>
@@ -623,9 +650,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-text">© 2024 Arthotthana Parishat. All rights reserved. Registered Society, State of Karnataka.</div>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
         <a href="terms.html">Terms &amp; Conditions</a>
-        <a href="#">Sitemap</a>
       </div>
     </div>
   </div>

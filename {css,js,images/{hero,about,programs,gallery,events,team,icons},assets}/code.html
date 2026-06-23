@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arthotthana Parishat - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#19b342",
+          "background-light": "#f6f8f6",
+          "background-dark": "#112115",
+          "organic-bg": "#F4EFEA",
+          "organic-surface": "#EADDCD",
+          "organic-text": "#2C362B",
+          "organic-muted": "#A8B0A3",
+          "organic-accent": "#E86A33",
+        },
+        fontFamily: {
+          "display": ["DM Sans", "sans-serif"],
+          "body": ["DM Sans", "sans-serif"],
+        },
+        borderRadius: {
+          "DEFAULT": "0.5rem", 
+          "lg": "1rem", 
+          "xl": "1.5rem", 
+          "full": "9999px",
+          "organic-1": "16px 24px 12px 20px",
+          "organic-2": "20px 12px 24px 16px",
+        },
+        boxShadow: {
+          'tactile': '0 12px 32px rgba(44, 54, 43, 0.08)',
+          'tactile-hover': '0 16px 40px rgba(74, 107, 83, 0.15)',
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F4EFEA; /* organic-bg */
+    color: #2C362B; /* organic-text */
+    position: relative;
+  }
+  
+  /* Subtle Grain Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+</style>
+</head>
+<body class="smooth-scroll antialiased selection:bg-primary selection:text-white">
+<!-- TopNavBar Shared Component -->
+<div class="relative flex h-auto w-full flex-col bg-organic-bg group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-organic-muted/30 px-4 md:px-10 py-4 mb-8">
+<div class="flex items-center gap-4 text-organic-text">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-organic-text text-xl font-bold leading-tight tracking-[-0.015em]">Arthotthana Parishat</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="text-organic-text hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Handmade Products</a>
+<a class="text-organic-text hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Community Projects</a>
+<a class="text-organic-text hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Get Involved</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Donate</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-organic-text text-2xl">menu</span>
+</div>
+</header>
+<!-- Hero Section -->
+<main>
+<div class="relative w-full pt-10 pb-20 px-4 md:px-8">
+<div class="flex flex-col lg:flex-row relative z-10">
+<!-- Overlapping Text Container -->
+<div class="lg:absolute lg:bottom-10 lg:left-0 lg:w-5/12 bg-organic-surface p-8 md:p-12 rounded-[16px_24px_12px_20px] shadow-tactile z-20 mt-8 lg:mt-0 order-2 lg:order-1 border border-white/40 backdrop-blur-sm">
+<h1 class="text-organic-text text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight mb-6">
+                  Empowering hands, uplifting communities.
+                </h1>
+<p class="text-organic-text/80 text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-md">
+                  Discover the handmade warmth and grassroots impact of our community projects, fostering sustainable livelihoods through traditional craftsmanship.
+                </p>
+<a class="inline-flex cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-primary/90 transition-transform hover:-translate-y-1 shadow-md text-white text-lg italic font-semibold leading-normal tracking-wide group" href="#impact-section">
+<span>Discover Our Craft</span>
+<span class="material-symbols-outlined ml-2 text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Hero Image offset to the right -->
+<div class="w-full lg:w-9/12 lg:ml-auto order-1 lg:order-2">
+<div class="aspect-[4/3] md:aspect-[16/9] lg:aspect-[4/3] w-full rounded-[20px_12px_24px_16px] overflow-hidden shadow-tactile relative">
+<!-- Skeleton Loader background -->
+<div class="absolute inset-0 bg-organic-surface animate-pulse"></div>
+<img class="w-full h-full object-cover relative z-10" data-alt="A warm, sunlit scene of local artisans working together in a rustic workshop. Hands are carefully weaving natural fibers. The lighting is soft and golden, highlighting the textures of raw materials. The mood is collaborative, focused, and deeply connected to traditional craftsmanship, setting a tactile and organic tone." onload="this.previousElementSibling.style.display='none'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv9dOC1WB2f6ZtSQOT9KG78OIa_RDfcudpAQijqGcwKJfCqbc8V5Z_Up4m_RYObaV7hVlcV0gaPYeKWskb4c8FHc_2gxaonQMGGytsNGF7tUKILDBUvJSqgkjGm0DfCQoRmUDvSHUU27y0FGMIpphFJZwFN3AGgQ6u-7LtTq8B8zT4QWOeCe2zgW8PymzsOoWpF4Ai2pFApZhY_9NAxWbt_Fb1zQvuSZHugRSk_5qIQ-M8omc7sGMrW3POpomFosGCFs4wUUvqKgQ"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Impact Section -->
+<div class="py-24 px-4 md:px-8 mt-10" id="impact-section">
+<div class="text-center mb-16">
+<span class="text-organic-accent uppercase tracking-widest text-sm font-semibold mb-3 block">Our Impact</span>
+<h2 class="text-3xl md:text-4xl font-bold text-organic-text">Growing Together</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto items-start">
+<!-- Card 1 -->
+<div class="bg-organic-surface rounded-[16px_24px_12px_20px] p-8 shadow-tactile hover:shadow-tactile-hover hover:-translate-y-2 transition-all duration-300 border border-white/30 flex flex-col items-center text-center group md:mt-0">
+<div class="w-16 h-16 rounded-full bg-organic-bg flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">group</span>
+</div>
+<h3 class="text-primary text-4xl md:text-5xl font-bold mb-3">500+</h3>
+<p class="text-organic-text font-medium text-lg">Artisans Supported</p>
+<p class="text-organic-text/70 text-sm mt-3">Empowering local creators with fair wages and sustainable resources.</p>
+</div>
+<!-- Card 2 (Staggered) -->
+<div class="bg-organic-surface rounded-[20px_12px_24px_16px] p-8 shadow-tactile hover:shadow-tactile-hover hover:-translate-y-2 transition-all duration-300 border border-white/30 flex flex-col items-center text-center group md:mt-12">
+<div class="w-16 h-16 rounded-full bg-organic-bg flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
+</div>
+<h3 class="text-primary text-4xl md:text-5xl font-bold mb-3">50+</h3>
+<p class="text-organic-text font-medium text-lg">Community Projects</p>
+<p class="text-organic-text/70 text-sm mt-3">Active initiatives focusing on education, health, and rural development.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-organic-surface rounded-[12px_20px_16px_24px] p-8 shadow-tactile hover:shadow-tactile-hover hover:-translate-y-2 transition-all duration-300 border border-white/30 flex flex-col items-center text-center group md:mt-24">
+<div class="w-16 h-16 rounded-full bg-organic-bg flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+</div>
+<h3 class="text-primary text-4xl md:text-5xl font-bold mb-3">100%</h3>
+<p class="text-organic-text font-medium text-lg">Sustainable Materials</p>
+<p class="text-organic-text/70 text-sm mt-3">Committed to eco-friendly practices that protect our environment.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-organic-surface mt-20 border-t border-organic-muted/20 relative z-10">
+<div class="max-w-[1200px] mx-auto px-6 md:px-10 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3 text-organic-text mb-6">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold">Arthotthana Parishat</h3>
+</div>
+<p class="text-organic-text/80 text-sm leading-relaxed mb-6">
+              A digital home for authentic craftsmanship and sustainable community development. Nurturing grassroots impact one handmade product at a time.
+            </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-organic-bg flex items-center justify-center text-organic-text hover:text-primary hover:bg-white transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-organic-bg flex items-center justify-center text-organic-text hover:text-primary hover:bg-white transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-organic-text mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Handmade Products</a></li>
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Community Projects</a></li>
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Our Artisans</a></li>
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-organic-text mb-6">Get Involved</h4>
+<ul class="space-y-4">
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Make a Donation</a></li>
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Volunteer With Us</a></li>
+<li><a class="text-organic-text/80 hover:text-primary transition-colors text-sm" href="#">Partner Network</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-organic-text mb-6">Stay Connected</h4>
+<p class="text-organic-text/80 text-sm mb-4">Join our newsletter for updates on new crafts and projects.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-organic-bg border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="Email address" type="email"/>
+<button class="bg-organic-text text-white rounded-lg px-4 py-3 text-sm font-semibold hover:bg-primary transition-colors" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-organic-muted/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-organic-text/60 text-sm">© 2024 Arthotthana Parishat. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-organic-text/60 hover:text-organic-text text-sm" href="#">Privacy Policy</a>
+<a class="text-organic-text/60 hover:text-organic-text text-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

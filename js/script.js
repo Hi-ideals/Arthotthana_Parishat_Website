@@ -205,7 +205,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (valid) {
-        showFormSuccess(contactForm, 'Message sent! We will get back to you soon.');
+        const name = document.getElementById('cf-name').value;
+        const email = document.getElementById('cf-email').value;
+        const phone = document.getElementById('cf-phone').value;
+        const subject = document.getElementById('cf-subject').value;
+        const org = document.getElementById('cf-org').value;
+        const message = document.getElementById('cf-message').value;
+
+        const mailtoLink = `mailto:arthotthana@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nOrganization/District: ${org}\n\nMessage:\n${message}`
+        )}`;
+
+        window.location.href = mailtoLink;
+        showFormSuccess(contactForm, 'Message prepared in your email client!');
       }
     });
 

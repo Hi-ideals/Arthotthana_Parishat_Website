@@ -22,17 +22,24 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="initiatives.html">Initiatives</a></li>
+            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="volunteers.html">Volunteer</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ms-lg-2"><a class="nav-link nav-donate-btn active" href="donate.html">Donate Now</a></li>
+        <!-- <li class="nav-item ms-lg-2"><a class="nav-link nav-donate-btn active" href="donate.html">Donate Now</a></li> -->
       </ul>
     </div>
   </div>
 </nav>
 
+<!--
 <section class="page-hero">
   <div class="container position-relative" style="z-index:2;">
     <div class="breadcrumb-ap"><a href="index.html">Home</a><span>/</span><span class="active">Donate</span></div>
@@ -41,11 +48,9 @@
   </div>
 </section>
 
-<!-- DONATION FORM + AMOUNTS -->
 <section class="section-pad">
   <div class="container">
     <div class="row gy-5 align-items-start">
-      <!-- Left: Amount Selection + Form -->
       <div class="col-lg-7 fade-up">
         <h3 style="font-family:var(--font-display);color:var(--green-dark);font-size:1.5rem;margin-bottom:24px;">Choose Your Contribution</h3>
 
@@ -108,13 +113,11 @@
           </div>
         </div>
 
-        <!-- Custom Amount -->
         <div class="ap-form-group mb-4">
           <label class="ap-label" for="custom-amount">Or enter a custom amount (₹)</label>
           <input type="number" id="custom-amount" class="ap-input" placeholder="e.g. 3000" min="10" />
         </div>
 
-        <!-- Donor Info -->
         <div style="background:var(--cream);border-radius:8px;padding:28px;margin-bottom:24px;">
           <h4 style="font-weight:700;color:var(--green-dark);margin-bottom:20px;font-size:1.05rem;">Your Details</h4>
           <div class="row g-3">
@@ -151,7 +154,6 @@
           </div>
         </div>
 
-        <!-- Payment Methods -->
         <div style="background:var(--white);border:1px solid #e2e8f0;border-radius:8px;padding:28px;margin-bottom:24px;">
           <h4 style="font-weight:700;color:var(--green-dark);margin-bottom:20px;font-size:1.05rem;"><i class="bi bi-shield-check" style="color:var(--green-light);"></i> Secure Payment</h4>
           <div class="row g-3">
@@ -180,7 +182,6 @@
               </label>
             </div>
           </div>
-          <!-- Bank Details -->
           <div style="background:var(--cream);border-radius:8px;padding:16px;margin-top:16px;">
             <div style="font-weight:700;font-size:.85rem;color:var(--green-dark);margin-bottom:10px;">Bank Transfer Details</div>
             <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.83rem;color:var(--muted);">
@@ -198,7 +199,6 @@
         <p style="text-align:center;font-size:.78rem;color:var(--muted);margin-top:12px;"><i class="bi bi-lock-fill"></i> Secured 256-bit SSL encryption &nbsp;|&nbsp; 80G Tax exemption available</p>
       </div>
 
-      <!-- Right: Impact Sidebar -->
       <div class="col-lg-4 offset-lg-1 fade-up">
         <div style="background:var(--green-dark);border-radius:8px;padding:32px;margin-bottom:24px;">
           <h4 style="font-family:var(--font-display);color:var(--white);font-size:1.2rem;margin-bottom:20px;">Your Impact</h4>
@@ -222,7 +222,6 @@
           </div>
         </div>
 
-        <!-- Trust Indicators -->
         <div style="background:var(--cream);border-radius:8px;padding:24px;margin-bottom:16px;">
           <div style="font-weight:700;color:var(--green-dark);margin-bottom:16px;font-size:.9rem;">Why Donate to Us?</div>
           <div style="display:flex;flex-direction:column;gap:12px;">
@@ -238,7 +237,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section-pad bg-cream">
   <div class="container">
     <div class="row justify-content-center">
@@ -267,7 +265,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">Can I set up a recurring monthly donation? <div class="faq-icon"><i class="bi bi-chevron-down"></i></div></div>
-            <div class="faq-answer">Yes! Recurring donations are a powerful way to support us. Please contact us at info@arthotthanaparishat.org or call us to set up a monthly giving arrangement and we'll walk you through the simple process.</div>
+            <div class="faq-answer">Yes! Recurring donations are a powerful way to support us. Please contact us at <a href="mailto:arthotthana@gmail.com" style="color: var(--green-mid); font-weight: 600;">arthotthana@gmail.com</a> or call us to set up a monthly giving arrangement and we'll walk you through the simple process.</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">Will I receive confirmation of my donation? <div class="faq-icon"><i class="bi bi-chevron-down"></i></div></div>
@@ -278,16 +276,44 @@
     </div>
   </div>
 </section>
+-->
+
+<section class="section-pad">
+  <div class="container text-center py-5">
+    <div style="font-size: 3rem; color: var(--green-mid); margin-bottom: 20px;"><i class="bi bi-heart-pulse"></i></div>
+    <h2 style="font-family: var(--font-display); color: var(--green-dark); margin-bottom: 16px;">Donations Suspended</h2>
+    <p style="color: var(--muted); max-width: 600px; margin: 0 auto 24px; line-height: 1.8;">Our online donation system is currently offline. If you wish to support our projects or get involved, please get in touch with us directly via our contact page.</p>
+    <a href="contact.html" class="btn-primary-green"><i class="bi bi-arrow-right"></i>Contact Us</a>
+  </div>
+</section>
 
 <footer class="footer-ap">
   <div class="container">
     <div class="row gy-5">
       <div class="col-lg-4"><div class="d-flex align-items-center gap-3 mb-3"><div class="brand-icon">A</div><div><div class="footer-brand-text">Arthotthana Parishat</div><div class="footer-tagline">Economic Development & Social Welfare</div></div></div><p class="footer-desc">Registered society working for unemployed youth and rural communities in Karnataka.</p><div class="social-links"><a href="#" class="social-link"><i class="bi bi-facebook"></i></a><a href="#" class="social-link"><i class="bi bi-instagram"></i></a><a href="#" class="social-link"><i class="bi bi-linkedin"></i></a></div></div>
-      <div class="col-6 col-lg-2"><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li><li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li><li><a href="programs.html"><i class="bi bi-chevron-right"></i>Programs</a></li><li><a href="events.html"><i class="bi bi-chevron-right"></i>Events</a></li><li><a href="volunteers.html"><i class="bi bi-chevron-right"></i>Volunteer</a></li><li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li></ul></div>
-      <div class="col-6 col-lg-2"><div class="footer-heading">Programs</div><ul class="footer-links"><li><a href="programs.html"><i class="bi bi-chevron-right"></i>Entrepreneurship</a></li><li><a href="programs.html"><i class="bi bi-chevron-right"></i>Digital Skills</a></li><li><a href="programs.html"><i class="bi bi-chevron-right"></i>Women Empowerment</a></li><li><a href="programs.html"><i class="bi bi-chevron-right"></i>Healthcare</a></li></ul></div>
-      <div class="col-lg-4"><div class="footer-heading">Contact Us</div><div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt-fill"></i></div><div class="footer-contact-text">H.No. 9-8-54, Gurupad Nilaya, BVB College Road, Vidyanagar, Bidar – 585401</div></div><div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope-fill"></i></div><div class="footer-contact-text">info@arthotthanaparishat.org</div></div></div>
+      <div class="col-6 col-lg-2"><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li><li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li><li><a href="initiatives.html"><i class="bi bi-chevron-right"></i>Initiatives</a></li><li><a href="projects.html"><i class="bi bi-chevron-right"></i>Projects</a></li><li><a href="events.html"><i class="bi bi-chevron-right"></i>Events</a></li><li><a href="volunteers.html"><i class="bi bi-chevron-right"></i>Volunteer</a></li><li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li></ul></div>
+      <div class="col-6 col-lg-2"><div class="footer-heading">Projects</div><ul class="footer-links"><li><a href="projects.html"><i class="bi bi-chevron-right"></i>Entrepreneurship</a></li><li><a href="projects.html"><i class="bi bi-chevron-right"></i>Digital Skills</a></li><li><a href="projects.html"><i class="bi bi-chevron-right"></i>Women Empowerment</a></li><li><a href="projects.html"><i class="bi bi-chevron-right"></i>Healthcare</a></li></ul></div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div class="footer-contact-text">H.No. 9-8-54, Gurupad Nilaya,<br>BVB College Road, Vidyanagar,<br>Bidar – 585401, Karnataka</div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="bi bi-telephone-fill"></i></div>
+          <div class="footer-contact-text"><a href="tel:+918762164645" style="color: inherit; text-decoration: none;">+91 87621 64645</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div class="footer-contact-text"><a href="mailto:arthotthana@gmail.com" style="color: inherit; text-decoration: none;">arthotthana@gmail.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="bi bi-clock-fill"></i></div>
+          <div class="footer-contact-text">Mon – Sat: 9:00 AM – 6:00 PM</div>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom"><div class="footer-bottom-text">© 2024 Arthotthana Parishat. All rights reserved. Registered Society, State of Karnataka.</div><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="#">Sitemap</a></div></div>
+    <div class="footer-bottom"><div class="footer-bottom-text">© 2024 Arthotthana Parishat. All rights reserved. Registered Society, State of Karnataka.</div><div class="footer-bottom-links"><a href="terms.html">Terms &amp; Conditions</a></div></div>
   </div>
 </footer>
 
