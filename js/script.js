@@ -58,29 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const el   = entry.target;
-        const end  = parseInt(el.getAttribute('data-count'));
+        const el = entry.target;
+        const end = parseInt(el.getAttribute('data-count'));
         const duration = 1800; // 1.8 seconds
         const startTime = performance.now();
         const suffix = el.getAttribute('data-suffix') || '';
-        
+
         function updateCounter(now) {
           const elapsed = now - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          
+
           // easeOutQuad curve for smooth decelerating animation
           const easeProgress = progress * (2 - progress);
           const curr = Math.floor(easeProgress * end);
-          
+
           el.textContent = curr.toLocaleString() + suffix;
-          
+
           if (progress < 1) {
             requestAnimationFrame(updateCounter);
           } else {
             el.textContent = end.toLocaleString() + suffix;
           }
         }
-        
+
         requestAnimationFrame(updateCounter);
         counterObserver.unobserve(el);
       }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   progressBars.forEach(b => progressObserver.observe(b));
 
   /* ── Gallery Filter ────────────────────────────────────── */
-  const filterBtns   = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
 
   filterBtns.forEach(btn => {
@@ -111,18 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const cat = btn.getAttribute('data-filter');
       galleryItems.forEach(item => {
         const show = cat === 'all' || item.getAttribute('data-cat') === cat;
-        item.style.opacity    = show ? '1' : '0';
-        item.style.transform  = show ? 'scale(1)' : 'scale(0.9)';
+        item.style.opacity = show ? '1' : '0';
+        item.style.transform = show ? 'scale(1)' : 'scale(0.9)';
         item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-        item.style.display    = show ? '' : 'none';
+        item.style.display = show ? '' : 'none';
       });
     });
   });
 
   /* ── Lightbox ──────────────────────────────────────────── */
   const lightbox = document.getElementById('lightbox');
-  const lbImg    = document.getElementById('lightbox-img');
-  const lbClose  = document.getElementById('lightbox-close');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbClose = document.getElementById('lightbox-close');
 
   document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', () => {
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── FAQ Accordion ─────────────────────────────────────── */
   document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
-      const item   = question.parentElement;
+      const item = question.parentElement;
       const answer = item.querySelector('.faq-answer');
       const isOpen = item.classList.contains('open');
 
@@ -346,9 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const timelineRect = timeline.getBoundingClientRect();
       const timelineHeight = timeline.offsetHeight;
-      
+
       svg.setAttribute('viewBox', `0 0 ${timelineRect.width} ${timelineHeight}`);
-      
+
       cachedPoints = [];
       dots.forEach(dot => {
         let top = 0;
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       cachedPathLength = pathFill.getTotalLength();
       pathFill.style.strokeDasharray = cachedPathLength;
-      
+
       onTimelineScroll();
     }
 
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const triggerY = viewportHeight * 0.7;
       const scrollYInTimeline = (viewportHeight - timelineRect.top) - (viewportHeight - triggerY);
-      
+
       const startY = cachedPoints[0].y;
       const endY = cachedPoints[cachedPoints.length - 1].y;
       const drawHeight = endY - startY;
